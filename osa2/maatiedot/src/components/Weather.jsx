@@ -13,4 +13,3 @@ const Weather = ({weather}) => {
   }
 
 export default Weather
-Math.fr
