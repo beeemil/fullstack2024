@@ -47,6 +47,17 @@ const App = () => {
             setNotificationMessage(null)
           }, 5000)
         })
+        .catch(error => {
+          console.log('error', error)
+          setNotificationType('error')
+          setNotificationMessage(
+            `${error.response.data.error}`
+          )
+          setTimeout(() => {
+            setNotificationMessage(null)
+            setNotificationType('notification')
+          }, 5000)
+      })
       }
     } else {
       personService
@@ -62,6 +73,17 @@ const App = () => {
             setNotificationMessage(null)
           }, 5000)
         })
+        .catch(error => {
+          console.log('error', error)
+          setNotificationType('error')
+          setNotificationMessage(
+            `${error.response.data.error}`
+          )
+          setTimeout(() => {
+            setNotificationMessage(null)
+            setNotificationType('notification')
+          }, 5000)
+      })
     }
   }
 
@@ -97,7 +119,7 @@ const App = () => {
       },5000)
     })
     }
-    
+  
   }
   const handleNameChange = (event) => {
     //console.log(event.target.value)
@@ -112,11 +134,11 @@ const App = () => {
     setNewFilter(event.target.value)
     setShowAll(false)
   }
-
+  console.log('persons',persons)
   const personsToShow = showAll
     ? persons
     : persons.filter(person => person.name.toUpperCase().includes(filterName.toUpperCase()))
-
+  console.log('personsToShow',personsToShow)
   return ( 
     <div>
       <h2>Phonebook</h2>

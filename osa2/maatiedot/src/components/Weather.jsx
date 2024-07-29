@@ -1,6 +1,6 @@
 const Weather = ({weather}) => {
     console.log('Weather Component', weather)
-    const temp = Math.round((weather.main.temp - 273.15) * 100) / 100
+    const temp = Math.round(weather.main.temp - 273.15) * 100) / 100
     const imgUrl = `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
     return(
         <>
@@ -13,4 +13,3 @@ const Weather = ({weather}) => {
   }
 
 export default Weather
-Math.fr
