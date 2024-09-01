@@ -39,7 +39,7 @@ const App = () => {
   return (
     <NotificationContext.Provider value={[notification, notificationDispatch]}>
       <div className='container'>
-        <h2>blogs</h2>
+        <h2>Blog App</h2>
         <Notification/>
         {!user && (<LoginForm/>)}
         {user && (

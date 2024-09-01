@@ -18,9 +18,9 @@ const Users = () => {
     <div>
       <h3>Users</h3>
       <Table striped>
+        <th>User</th>
+        <th>Blogs Created</th>
         <tbody>
-          <th>User</th>
-          <th>Blogs Created</th>
           {users
             .sort((a, b) => b.blogs.length - a.blogs.length)
             .map((user) => (
